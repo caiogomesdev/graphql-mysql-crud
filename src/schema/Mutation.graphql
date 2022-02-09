@@ -3,6 +3,7 @@
 type Mutation{
     createUser(nome: String!, email: String!): Usuario
     updateUser(id: Int!, data: UserInput): Usuario
+    deleteUser(id: Int!): Usuario
 }
 
 input UserInput{

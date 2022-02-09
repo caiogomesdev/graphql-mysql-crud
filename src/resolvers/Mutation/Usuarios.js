@@ -12,5 +12,9 @@ module.exports = {
         const user = await usuario.findByPk(id)
         user.set({...data})
         return await user.save();
+    },
+    deleteUser: async ( _, {id})=>{
+        const user = await usuario.findByPk(id)
+        return await user.destroy()
     }
 }
