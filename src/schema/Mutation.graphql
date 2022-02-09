@@ -1,5 +1,11 @@
 # import Usuario from 'Usuario.graphql'
 
-type Mutation {
-    createUser(nome: String!, email: String): Usuario
+type Mutation{
+    createUser(nome: String!, email: String!): Usuario
+    updateUser(id: Int!, data: UserInput): Usuario
+}
+
+input UserInput{
+    nome: String,
+    Email: String
 }
